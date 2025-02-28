@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boids Battle Evolution</title>
+    <style>
+        body { margin: 0; overflow: hidden; font-family: Arial, sans-serif; }
+        canvas { display: block; }
+        .ui-overlay {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            background: rgba(0,0,0,0.5);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .controls-info {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: white;
+            background: rgba(0,0,0,0.5);
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.157.0/build/three.module.js"
+      }
+    }
+    </script>
+</head>
+<body>
+    <div class="ui-overlay">
+        <div>Generation: <span id="generation">1</span></div>
+        <div>Red Team: <span id="red-count">50</span></div>
+        <div>Blue Team: <span id="blue-count">50</span></div>
+        <div>Battle Time: <span id="battle-time">0</span>s</div>
+        <div id="invisibility-status">Visibility: ON</div>
+    </div>
+    <div class="controls-info">
+        <div>WASD - Move</div>
+        <div>Mouse - Look</div>
+        <div>Space - Jump</div>
+        <div>C - Crouch</div>
+        <div>Shift - Sprint</div>
+        <div>H - Toggle Invisibility</div>
+        <div>R - Reset Position</div>
+        <div>M - Toggle Music</div>
+        <div>` (Backtick) - Debug Menu</div>
+    </div>
+    
+    <!-- Load as ES module with proper path -->
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
